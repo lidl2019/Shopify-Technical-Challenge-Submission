@@ -2,7 +2,9 @@ This challenge is completed by applicant @Dailun Li, github id lidl2019.
 
 Question 1:
 
-This dataset is miscalculated by sum up the "order_amount" column and divided by 5000. However 5000 is not the right amount since there are orders with multiple items. The correct calculation involves both the "order_amount" and the "total_items" columns, and the correct answer should be 357.92
+This dataset is miscalculated by sum up the "order_amount" column and divided by 5000. 
+However 5000 is not the right amount since there are orders with multiple items. 
+The correct calculation involves both the "order_amount" and the "total_items" columns, and the correct answer should be 357.92
 
 
 Question 2:
@@ -13,11 +15,13 @@ SELECT *, Count(*) FROM Orders Left Join Shippers on Orders.ShipperID = Shippers
 (result = 54)
 
 (b):
-SELECT Employees.LastName, Count(Orders.EmployeeID) FROM Orders Left Join Employees on Orders.EmployeeID=Employees.EmployeeID Group by Orders.EmployeeID order by Count(Orders.EmployeeID) Desc 
+SELECT Employees.LastName, Count(Orders.EmployeeID) FROM Orders Left Join Employees on
+Orders.EmployeeID=Employees.EmployeeID Group by Orders.EmployeeID order by Count(Orders.EmployeeID) Desc 
 
 (result = 40, name = Peacock)
 
 (c):
-SELECT ProductName, Sum(Quantity) FROM OrderDetails Left Join Products on OrderDetails.ProductID = Products.ProductID group by OrderDetails.ProductID order by Sum(Quantity) desc 
+SELECT ProductName, Sum(Quantity) FROM OrderDetails Left Join Products on OrderDetails.ProductID = Products.ProductID 
+group by OrderDetails.ProductID order by Sum(Quantity) desc 
 
 (Gorgonzola Telino, 458 orders)
